@@ -1,0 +1,1782 @@
+  Reading input spec file from /tmp/tmpuvm8d_5_.spc
+
+1
+
+               U. S. Department of Commerce, U. S. Census Bureau
+
+              X-13ARIMA-SEATS monthly seasonal adjustment Method,
+                          Release Version 1.1 Build 39
+
+
+           This software application provides an enhanced version of
+             Statistics Canada's X-11-ARIMA extension (Dagum, 1980)
+                 of the X-11 variant of the Census Method II of
+                      Shiskin, Young and Musgrave (1967).
+
+            It also provides an ARIMA model-based method following
+       Hillmer and Tiao (1982) and Burman (1980) that is very similar
+       to the update of the method of SEATS (Gomez and Maravall, 1996)
+                produced at the Bank of Spain by G. Caporello and
+               A. Maravall for TSW (Caporello and Maravall, 2004).
+          The present application includes additional enhancements.
+
+         X-13ARIMA-SEATS includes an automatic ARIMA model selection procedure
+          based largely on the procedure of Gomez and Maravall (1998)
+            as implemented in TRAMO (1996) and subsequent revisions.
+
+              Primary Programmers: Brian Monsell, Mark Otto and,
+                 for the ARIMA model-based signal extraction,
+                      Gianluca Caporello and Victor Gomez
+
+
+     Series Title- Comercial
+     Series Name- Comercial
+     Oct  6, 2019  21.16.04 
+
+        -Period covered-  1st month,2013 to  7th month,2019
+        -Type of run - auto-mode seasonal adjustment
+
+        -Sigma limits for graduating extreme values are  1.5 and  2.5 .
+        -3x3 moving average used in section 1 of each iteration, 
+         3x5 moving average in section 2 of iterations B and C,
+         moving average for final seasonal factors chosen by Global MSR.
+        -Spectral plots generated for selected series
+
+ FILE SAVE REQUESTS (* indicates file exists and will be overwritten)
+  /tmp/tmp09alx64r.d11  final seasonally adjusted data
+  /tmp/tmp09alx64r.d12  final trend cycle
+  /tmp/tmp09alx64r.d13  final irregular component
+  /tmp/tmp09alx64r.out  program output file
+  /tmp/tmp09alx64r.err  program error file
+        Comercial            PAGE   1, SERIES Comercial
+
+     Contents of spc file /tmp/tmpuvm8d_5_.spc
+
+ Line #
+ ------
+      1: Series {
+      2:         data=(3319300.732
+      3: 2820263.212
+      4: 2861328.931000001
+      5: 2826797.31
+      6: 2948663.278
+      7: 2873790.573000001
+      8: 2956731.611
+      9: 2922991.7610000004
+     10: 2900911.235
+     11: 2932005.209
+     12: 2990708.083
+     13: 3584315.252
+     14: 3391625.271
+     15: 2809183.129
+     16: 2868175.287
+     17: 2823804.31
+     18: 2942788.227
+     19: 2934233.844
+     20: 3048696.074
+     21: 2872443.269
+     22: 2862307.872
+     23: 3107339.382
+     24: 3048429.907
+     25: 3285891.239
+     26: 3362160.243
+     27: 3076340.8210000005
+     28: 3263679.403
+     29: 2962996.604
+     30: 2979187.146
+     31: 3090851.165
+     32: 3167257.017
+     33: 3107591.109
+     34: 2974027.512
+     35: 3011162.495
+     36: 2974462.4060000004
+     37: 3381377.415
+     38: 3444350.201000001
+     39: 3502617.7630000007
+     40: 3147650.058
+     41: 3012916.435
+     42: 3238169.8880000007
+     43: 3225607.243
+     44: 3297117.986
+     45: 3142684.389
+     46: 3024415.739
+     47: 2947505.001
+     48: 3052952.547
+     49: 3432016.548
+     50: 3598534.747
+     51: 3415380.127
+     52: 3307774.508
+     53: 2900824.1410000008
+     54: 3032368.488
+     55: 3071333.622
+     56: 3170032.595
+     57: 3124972.612
+     58: 3010747.755
+     59: 3041227.208
+     60: 3070853.235
+     61: 3551645.486
+     62: 3606989.074
+     63: 3277824.4080000008
+     64: 3342913.6
+     65: 3131427.393
+     66: 3097163.189
+     67: 3222878.693
+     68: 3301220.901
+     69: 3225202.776
+     70: 2897108.849
+     71: 2938003.038
+     72: 2965539.219
+     73: 3222629.494
+     74: 3397334.473
+     75: 3123698.784
+     76: 3044854.983
+     77: 2892482.731
+     78: 2973830.213
+     79: 2937048.667
+     80: 3288949.873)
+     81: appendbcst=no
+     82: appendfcst=no
+     83: period=12
+     84: start=2013.1
+     85: title="Comercial"
+     86: name="Comercial"
+     87:  
+     88:         }
+     89:         transform{function=auto}
+     90: outlier{}
+     91: automdl{
+     92: maxorder = (2 1)
+     93: maxdiff = (2 1)
+     94: }
+     95: x11{ save=(d11 d12 d13) }
+
+
+ Likelihood statistics for model fit to untransformed series.
+
+ Likelihood Statistics
+ ------------------------------------------------------------------
+ Number of observations (nobs)                                   79
+ Effective number of observations (nefobs)                       66
+ Number of parameters estimated (np)                              3
+ Log likelihood (L)                                       -872.9593
+ AIC                                                      1751.9187 
+ AICC (F-corrected-AIC)                                   1752.3058 
+ Hannan Quinn                                             1754.5144 
+ BIC                                                      1758.4877 
+ ------------------------------------------------------------------
+
+
+ Likelihood statistics for model fit to log transformed series.
+
+ Likelihood Statistics
+ ------------------------------------------------------------------
+ Number of observations (nobs)                                   79
+ Effective number of observations (nefobs)                       66
+ Number of parameters estimated (np)                              3
+ Log likelihood                                            115.0841
+ Transformation Adjustment                                -987.0145
+ Adjusted Log likelihood (L)                              -871.9305
+ AIC                                                      1749.8610 
+ AICC (F-corrected-AIC)                                   1750.2481 
+ Hannan Quinn                                             1752.4567 
+ BIC                                                      1756.4299 
+ ------------------------------------------------------------------
+
+
+   *****   AICC (with aicdiff=-2.00) prefers log transformation   *****
+   *****   Multiplicative seasonal adjustment will be performed.   ****
+
+
+
+        Comercial            PAGE   2, SERIES Comercial
+
+ A 1  Time series data (for the span analyzed)
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec           TOTAL  
+ ------------------------------------------------------------------------------
+  2013        3319301.     2820263.     2861329.     2826797.
+              2948663.     2873791.     2956732.     2922992.
+              2900911.     2932005.     2990708.     3584315.        35937807.
+ 
+  2014        3391625.     2809183.     2868175.     2823804.
+              2942788.     2934234.     3048696.     2872443.
+              2862308.     3107339.     3048430.     3285891.        35994918.
+ 
+  2015        3362160.     3076341.     3263679.     2962997.
+              2979187.     3090851.     3167257.     3107591.
+              2974028.     3011162.     2974462.     3381377.        37351093.
+ 
+  2016        3444350.     3502618.     3147650.     3012916.
+              3238170.     3225607.     3297118.     3142684.
+              3024416.     2947505.     3052953.     3432017.        38468004.
+ 
+  2017        3598535.     3415380.     3307775.     2900824.
+              3032368.     3071334.     3170033.     3124973.
+              3010748.     3041227.     3070853.     3551645.        38295695.
+ 
+  2018        3606989.     3277824.     3342914.     3131427.
+              3097163.     3222879.     3301221.     3225203.
+              2897109.     2938003.     2965539.     3222629.        38228901.
+ 
+  2019        3397334.     3123699.     3044855.     2892483.
+              2973830.     2937049.     3288950.             
+                                                                     21658200.
+ 
+  AVGE        3445756.     3146473.     3119482.     2935893.
+              3030310.     3050821.     3175715.     3065981.
+              2944920.     2996207.     3017158.     3409646.
+
+  Table Total-     245934617.01   Mean-     3113096.42   Std. Dev.-      205516.76
+                                  Min -     2809183.13        Max -     3606989.07
+        Comercial            PAGE   3, SERIES Comercial
+                        Automatic ARIMA Model Selection
+
+                    Procedure based closely on TRAMO method 
+                         of Gomez and Maravall (2000)
+              "Automatic Modeling Methods for Univariate Series",
+                            A Course in Time Series
+                  (Edited by D. Pena, G. C. Tiao, R. S. Tsay),
+                         New York : J. Wiley and Sons
+
+
+     Maximum order for regular ARMA parameters :   2
+     Maximum order for seasonal ARMA parameters :   1
+     Maximum order for regular differencing :   2
+     Maximum order for seasonal differencing :   1
+
+   Results of Unit Root Test for identifying orders of differencing:
+     Regular difference order :   0
+     Seasonal difference order :   1
+
+     Mean is significant.
+
+  Automatic model choice : (1 0 0)(0 1 1)
+
+
+  Final Checks for Identified Model
+
+
+  Checking for Unit Roots.
+   No unit roots found.
+
+  Checking for insignificant ARMA coefficients.
+
+  Final automatic model choice : (1 0 0)(0 1 1)
+   End of automatic model selection procedure.
+
+ Average absolute percentage error in within-sample forecasts:
+  Last year:   1.67      Last-1 year:   1.17     Last-2 year:   3.62
+  Last three years:    2.15
+
+ Estimation converged in    8 ARMA iterations,   53 function evaluations.
+
+ Regression Model
+ ------------------------------------------------------------------------------
+                             Parameter        Standard
+ Variable                     Estimate           Error      t-value
+ ------------------------------------------------------------------------------
+ Constant                       0.0184         0.00382         4.81
+
+ Automatically Identified Outliers
+   AO2016.Feb                   0.1166         0.02593         4.50
+   LS2018.Sep                  -0.0750         0.01609        -4.66
+ ------------------------------------------------------------------------------
+
+
+ ARIMA Model:  (1 0 0)(0 1 1)
+   Seasonal differences:    1
+                                              Standard
+ Parameter                    Estimate          Errors
+ -----------------------------------------------------
+ Nonseasonal AR                                    
+   Lag  1                       0.3772         0.11111
+
+ Seasonal MA                                       
+   Lag 12                       0.6039         0.09512
+
+ Variance                       0.93821E-03
+ SE of Var                      0.16210E-03
+ -----------------------------------------------------
+
+ Likelihood Statistics
+ ------------------------------------------------------------------
+ Number of observations (nobs)                                   79
+ Effective number of observations (nefobs)                       67
+ Number of parameters estimated (np)                              6
+ Log likelihood                                            135.6878
+ Transformation Adjustment                               -1002.0514
+ Adjusted Log likelihood (L)                              -866.3635
+ AIC                                                      1744.7270 
+ AICC (F-corrected-AIC)                                   1746.1270 
+ Hannan Quinn                                             1749.9614 
+ BIC                                                      1757.9552 
+ ------------------------------------------------------------------
+
+ QS Statistic for regARIMA Model Residuals (full series):             0.00
+                                                       (P-Value =     1.0000)
+      10*LOG(SPECTRUM) of the regARIMA model residuals
+      Spectrum estimated from 2013.Jan to 2019.Jul.
+ ++++++++++I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I
+     -25.37I       *                                                     I    -25.37
+           I       *                 *                                   I
+           I       *                 **                                  I
+           I       *             *   **                                  I
+     -26.88I       *             *   **          *                       I    -26.88
+           I       *    *        *   **          *                       I
+           I       *    *        *   **      *   *                       I
+           I       *    *        *   **      *   *                       I
+     -28.39I       *    *        *   **      *   *                       I    -28.39
+           I       *    *        **  **      *   *        *              I
+           I       *    *       S**  **      *   *        *              I
+           I       *   **   *   S**  **      **  *        *              I
+     -29.91I       *   **   *   S**  **     *** **        *              I    -29.91
+           I       *   **   *   S** ***     *** **        *              I
+           I       *   **  ***  S** ***     *** **        **             I
+           I       *   **  ***  S*******    *** ***  *T   **        *    I
+     -31.42I       *   **  *** *S*******   ********  *T   **        *    I    -31.42
+           I       *   *** *****S*******  S********  *T   **        *    I
+           I       *   *** *****S*******  S********  *T   **        *    I
+           I       *   *********S******* *S********  *T   **        *    I
+     -32.93I       *   *********S*********S********  *T  ***        *    I    -32.93
+           I       *   *********S*********S******** S*T  ****       *    I
+           I   *  **   *********S*********S******** S*T  ****      ***   I
+           I  **  ***  *********S*********S*********S*T  ****      ***   I
+     -34.44I  **  ***  *********S*********S*********S*T  ****      ***   I    -34.44
+           I  **  ***  *********S*********S*********S*T* ****      ***   I
+           I  **  *** S*********S*********S*********S*T* ****      ***   I
+           I  **  *** S*********S*********S*********S*T******     ****   I
+     -35.96I  **  *** S*********S*********S*********S*T******     ****   I    -35.96
+           I  **  *** S*********S*********S*********S*T******     ****   I
+           I  **  ****S*********S*********S*********S*T*******    ****   I
+           I  **  ****S*********S*********S*********S*T*******    ****   I
+     -37.47I  **  ****S*********S*********S*********S*T*******    ****   I    -37.47
+           I  ********S*********S*********S*********S*T*******    ****   I
+           I  ********S*********S*********S*********S*T*******    ****   I
+           I  ********S*********S*********S*********S*T*******    ****   I
+     -38.98I  ********S*********S*********S*********S*T*******    ****   I    -38.98
+           I *********S*********S*********S*********S*T*******   *****   I
+           I *********S*********S*********S*********S*T*******S  *****   I
+           I *********S*********S*********S*********S*T*******S  *****   I
+     -40.49I *********S*********S*********S*********S*T*******S  ******  I    -40.49
+           I**********S*********S*********S*********S*T*******S  ******  I
+           I**********S*********S*********S*********S*T*******S*T******  I
+           I**********S*********S*********S*********S*T*******S*T******  I
+     -42.01I**********S*********S*********S*********S*T*******S*T******  I    -42.01
+           I**********S*********S*********S*********S*T*******S*T******  I
+           I**********S*********S*********S*********S*T*******S*T******  I
+           I**********S*********S*********S*********S*T*******S*T******  I
+     -43.52I**********S*********S*********S*********S*T*******S*T******  I    -43.52
+           I**********S*********S*********S*********S*T*******S*T******  I
+           I**********S*********S*********S*********S*T*******S*T******* I
+           I**********S*********S*********S*********S*T*******S*T******* I
+     -45.03I**********S*********S*********S*********S*T*******S*T*******SI    -45.03
+ ++++++++++I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I
+            S=SEASONAL FREQUENCIES, T=TRADING DAY FREQUENCIES
+
+
+ FORECASTING
+  Origin  2019.Jul
+  Number        12
+
+  Forecasts and Standard Errors of the Transformed Data
+   ------------------------------
+                         Standard
+       Date   Forecast      Error
+   ------------------------------
+   2019.Aug      14.95      0.032
+   2019.Sep      14.90      0.034
+   2019.Oct      14.91      0.034
+   2019.Nov      14.92      0.034
+   2019.Dec      15.03      0.034
+   2020.Jan      15.06      0.034
+   2020.Feb      14.97      0.034
+   2020.Mar      14.97      0.034
+   2020.Apr      14.90      0.034
+   2020.May      14.92      0.034
+   2020.Jun      14.93      0.034
+   2020.Jul      14.99      0.034
+   ------------------------------
+
+  Confidence intervals with coverage probability ( 0.95000
+  On the Original Scale
+   ------------------------------------------
+       Date       Lower   Forecast      Upper
+   ------------------------------------------
+   2019.Aug  2912446.60 3099939.49 3299502.49
+   2019.Sep  2775237.23 2964051.33 3165711.46
+   2019.Oct  2790346.61 2983363.01 3189730.91
+   2019.Nov  2812368.35 3007786.98 3216784.35
+   2019.Dec  3143379.17 3362117.59 3596077.37
+   2020.Jan  3245461.93 3471420.89 3713111.81
+   2020.Feb  2964674.62 3171701.75 3393185.86
+   2020.Mar  2951454.79 3157194.43 3377275.75
+   2020.Apr  2763803.48 2956487.02 3162603.84
+   2020.May  2832473.36 3029953.90 3241202.82
+   2020.Jun  2853305.60 3052242.21 3265048.96
+   2020.Jul  3032914.20 3244374.84 3470578.93
+   ------------------------------------------
+        Comercial            PAGE   4, SERIES Comercial
+  
+ A 8  RegARIMA combined outlier component
+      (AO, LS outliers included)
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2013           107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8            107.8
+ 
+  2014           107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8            107.8
+ 
+  2015           107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8            107.8
+ 
+  2016           107.8        121.1        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8            108.9
+ 
+  2017           107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8            107.8
+ 
+  2018           107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 100.0        100.0        100.0        100.0            105.2
+ 
+  2019           100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0             
+                                                                         100.0
+ 
+  AVGE           106.7        108.6        106.7        106.7
+                 106.7        106.7        106.7        107.8
+                 106.5        106.5        106.5        106.5
+
+  Table Total-          8443.30   Mean-         106.88   Std. Dev.-           7.56
+                                  Min -         100.00        Max -         121.12
+
+ A 8.A  RegARIMA outlier component
+  From  2019.Aug to 2020.Jul
+  Observations         12
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2019                                                       
+                                                        100.0
+                 100.0        100.0        100.0        100.0            100.0
+ 
+  2020           100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0             
+                                                                         100.0
+ 
+        Comercial            PAGE   5, SERIES Comercial
+
+ A 8.AO  RegARIMA AO outlier component
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2013           100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0            100.0
+ 
+  2014           100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0            100.0
+ 
+  2015           100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0            100.0
+ 
+  2016           100.0        112.4        100.0        100.0
+                 100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0            101.0
+ 
+  2017           100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0            100.0
+ 
+  2018           100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0            100.0
+ 
+  2019           100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0             
+                                                                         100.0
+ 
+  AVGE           100.0        101.8        100.0        100.0
+                 100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0
+
+  Table Total-          7912.37   Mean-         100.16   Std. Dev.-           1.39
+                                  Min -         100.00        Max -         112.37
+        Comercial            PAGE   6, SERIES Comercial
+
+ A 8.LS  RegARIMA level change outlier component
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2013           107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8            107.8
+ 
+  2014           107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8            107.8
+ 
+  2015           107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8            107.8
+ 
+  2016           107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8            107.8
+ 
+  2017           107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8            107.8
+ 
+  2018           107.8        107.8        107.8        107.8
+                 107.8        107.8        107.8        107.8
+                 100.0        100.0        100.0        100.0            105.2
+ 
+  2019           100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0             
+                                                                         100.0
+ 
+  AVGE           106.7        106.7        106.7        106.7
+                 106.7        106.7        106.7        107.8
+                 106.5        106.5        106.5        106.5
+
+  Table Total-          8429.97   Mean-         106.71   Std. Dev.-           7.23
+                                  Min -         100.00        Max -         107.79
+        Comercial            PAGE   7, SERIES Comercial
+  
+ B 1  Original series (prior adjusted)
+      (adjusted for regARIMA factors)
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec           TOTAL  
+ ------------------------------------------------------------------------------
+  2013        3079308.     2616352.     2654448.     2622414.
+              2735468.     2666009.     2742953.     2711653.
+              2691169.     2720015.     2774473.     3325161.        33339424.
+ 
+  2014        3146403.     2606073.     2660800.     2619637.
+              2730018.     2722082.     2828269.     2664759.
+              2655357.     2882672.     2828022.     3048314.        33392405.
+ 
+  2015        3119069.     2853915.     3027708.     2748765.
+              2763785.     2867376.     2938257.     2882905.
+              2758999.     2793449.     2759402.     3136896.        34650526.
+ 
+  2016        3195316.     2891746.     2920068.     2795076.
+              3004043.     2992389.     3058729.     2915461.
+              2805744.     2734394.     2832217.     3183874.        35329057.
+ 
+  2017        3338353.     3168441.     3068615.     2691088.
+              2813121.     2849269.     2940832.     2899030.
+              2793064.     2821340.     2848824.     3294854.        35526830.
+ 
+  2018        3346196.     3040830.     3101213.     2905018.
+              2873231.     2989857.     3062535.     2992013.
+              2897109.     2938003.     2965539.     3222629.        36334176.
+ 
+  2019        3397334.     3123699.     3044855.     2892483.
+              2973830.     2937049.     3288950.             
+                                                                     21658200.
+ 
+  AVGE        3231711.     2900151.     2925387.     2753497.
+              2841928.     2860576.     2980075.     2844304.
+              2766907.     2814979.     2834746.     3201955.
+
+  Table Total-     230230617.12   Mean-     2914311.61   Std. Dev.-      196037.44
+                                  Min -     2606072.92        Max -     3397334.47
+
+ B 1.A  Forecasts of (prior adjusted) original series
+  From  2019.Aug to 2020.Jul
+  Observations         12
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec           TOTAL  
+ ------------------------------------------------------------------------------
+  2019                                                       
+                                                     3099939.
+              2964051.     2983363.     3007787.     3362118.        15417258.
+ 
+  2020        3471421.     3171702.     3157194.     2956487.
+              3029954.     3052242.     3244375.             
+                                                                     22083375.
+ 
+        Comercial            PAGE   8, SERIES Comercial
+
+ C 17  Final weights for irregular component
+  From  2013.Jan to 2019.Jul
+  Observations         79
+  Lower sigma limit    1.50
+  Upper sigma limit    2.50
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            S.D.  
+ ------------------------------------------------------------------------------
+  2013           100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0          0.0              1.7
+ 
+  2014           100.0          0.0         76.9        100.0
+                 100.0        100.0        100.0         61.3
+                 100.0          0.0        100.0        100.0              1.7
+ 
+  2015           100.0        100.0          0.0        100.0
+                  86.6        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0              1.7
+ 
+  2016           100.0        100.0        100.0        100.0
+                  69.5        100.0        100.0        100.0
+                 100.0         80.2        100.0        100.0              1.7
+ 
+  2017           100.0          0.0        100.0          0.0
+                 100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0              1.5
+ 
+  2018           100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0
+                 100.0        100.0        100.0        100.0              1.5
+ 
+  2019           100.0        100.0        100.0        100.0
+                 100.0         15.6          0.0             
+                                                                           1.5
+ 
+        Comercial            PAGE   9, SERIES Comercial
+
+ D 8  Final unmodified SI ratios
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2013           113.3         96.3         97.6         96.3
+                 100.2         97.3         99.7         98.0
+                  96.7         97.1         98.7        118.4            100.8
+ 
+  2014           112.6         93.8         96.2         95.0
+                  99.2         98.8        102.3         95.9
+                  95.1        102.7        100.2        107.4             99.9
+ 
+  2015           109.4         99.8        105.8         95.9
+                  96.1         99.5        101.7         99.5
+                  95.1         96.4         95.5        108.8            100.3
+ 
+  2016           110.8         99.7         99.8         94.5
+                 100.8        100.0        102.3         98.1
+                  95.0         92.9         96.1        107.6             99.8
+ 
+  2017           112.4        106.6        103.6         91.5
+                  96.3         97.9        101.1         99.2
+                  94.9         95.2         95.4        109.8            100.3
+ 
+  2018           111.1        100.7        102.6         96.1
+                  95.0         98.8        101.0         98.4
+                  95.1         96.4         97.4        106.1             99.9
+ 
+  2019           112.0        103.0        100.2         94.6
+                  96.6         94.9        105.8             
+                                                                         101.0
+ 
+  AVGE           111.7        100.0        100.8         94.8
+                  97.7         98.2        102.0         98.2
+                  95.3         96.8         97.2        109.7
+
+  Table Total-          7919.77   Mean-         100.25   Std. Dev.-           5.64
+                                  Min -          91.47        Max -         118.44
+        Comercial            PAGE  10, SERIES Comercial
+
+ D 8.A  F-tests for seasonality
+
+    Test for the presence of seasonality assuming stability.
+
+                           Sum of     Dgrs.of         Mean
+                          Squares     Freedom        Square       F-Value
+    Between months        2049.8458       11        186.34962      27.517**
+          Residual         453.7301       67          6.77209
+             Total        2503.5759       78
+
+            **Seasonality present at the 0.1 per cent level.
+
+
+  Nonparametric Test for the Presence of Seasonality Assuming Stability
+
+                 Kruskal-Wallis      Degrees of    Probability
+                   Statistic        Freedom         Level
+
+                      55.4754          11            0.000%
+
+            Seasonality present at the one percent level.
+
+
+  Moving Seasonality Test
+                         Sum of     Dgrs.of         Mean
+                        Squares     Freedom        Square       F-value
+   Between Years          20.7088        5         4.141764       0.966  
+           Error         235.8137       55         4.287521
+
+            No evidence of moving seasonality at the five percent level.
+
+
+  COMBINED TEST FOR THE PRESENCE OF IDENTIFIABLE SEASONALITY
+
+
+            IDENTIFIABLE SEASONALITY PRESENT
+        Comercial            PAGE  11, SERIES Comercial
+
+ D 8.B  Final unmodified SI ratios, with labels for outliers and extreme values
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ -----------------------------------------------------------------
+                  Jan           Feb           Mar           Apr  
+                  May           Jun           Jul           Aug  
+                  Sep           Oct           Nov           Dec  
+ -----------------------------------------------------------------
+  2013          113.3          96.3          97.6          96.3  
+                100.2          97.3          99.7          98.0  
+                 96.7          97.1          98.7         118.4* 
+ 
+  2014          112.6          93.8*         96.2*         95.0  
+                 99.2          98.8         102.3          95.9* 
+                 95.1         102.7*        100.2         107.4  
+ 
+  2015          109.4          99.8         105.8*         95.9  
+                 96.1*         99.5         101.7          99.5  
+                 95.1          96.4          95.5         108.8  
+ 
+  2016          110.8          99.7#         99.8          94.5  
+                100.8*        100.0         102.3          98.1  
+                 95.0          92.9*         96.1         107.6  
+ 
+  2017          112.4         106.6*        103.6          91.5* 
+                 96.3          97.9         101.1          99.2  
+                 94.9          95.2          95.4         109.8  
+ 
+  2018          111.1         100.7         102.6          96.1  
+                 95.0          98.8 -       101.0 -        98.4 -
+                 95.1#         96.4 -        97.4 -       106.1 -
+ 
+  2019          112.0         103.0         100.2          94.6  
+                 96.6          94.9*        105.8*               
+                                                                 
+ 
+
+  Key to symbols:
+    *  : extreme value as determined by X-11 extreme value procedure
+    #  : regARIMA outlier (either AO, LS, TC, or Ramp)
+    -  : values around a level shift most likely to be influenced by it
+ 
+        Comercial            PAGE  12, SERIES Comercial
+
+ D 9  Final replacement values for SI ratios
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ -------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec 
+ -------------------------------------------------------------
+  2013    ************ ************ ************ ************
+          ************ ************ ************ ************
+          ************ ************ ************        108.6
+ 
+  2014    ************         98.7         96.8 ************
+          ************ ************ ************         97.2
+          ************         96.4 ************ ************
+ 
+  2015    ************ ************        100.2 ************
+                  96.5 ************ ************ ************
+          ************ ************ ************ ************
+ 
+  2016    ************ ************ ************ ************
+                  99.9 ************ ************ ************
+          ************         93.4 ************ ************
+ 
+  2017    ************        100.8 ************         95.2
+          ************ ************ ************ ************
+          ************ ************ ************ ************
+ 
+  2018    ************ ************ ************ ************
+          ************ ************ ************ ************
+          ************ ************ ************ ************
+ 
+  2019    ************ ************ ************ ************
+          ************         97.7        101.9             
+                                                             
+ 
+
+ D 9.A  Moving seasonality ratio
+ -------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+
+ -------------------------------------------------------------
+   I             1.328        1.113        2.124        1.095
+
+   S             0.162        0.574        0.686        0.116
+
+ RATIO           8.186        1.940        3.094        9.419
+
+
+
+
+ -------------------------------------------------------------
+                  May          Jun          Jul          Aug 
+
+ -------------------------------------------------------------
+   I             2.042        1.163        1.050        1.414
+
+   S             0.471        0.132        0.116        0.133
+
+ RATIO           4.339        8.823        9.048       10.655
+
+
+
+
+ -------------------------------------------------------------
+                  Sep          Oct          Nov          Dec 
+
+ -------------------------------------------------------------
+   I             0.432        1.412        2.092        1.970
+
+   S             0.141        0.270        0.438        0.188
+
+ RATIO           3.051        5.223        4.782       10.474
+
+
+
+
+        Comercial            PAGE  13, SERIES Comercial
+
+ D 10  Final seasonal factors
+  From  2013.Jan to 2019.Jul
+  Observations         79
+  Seasonal filter    3 x 5 moving average
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2013          111.72        98.57        98.55        95.61
+                 98.89        98.83       101.47        98.28
+                 95.59        96.20        97.87       108.24            99.99
+ 
+  2014          111.69        98.75        98.92        95.51
+                 98.76        98.83       101.50        98.33
+                 95.48        95.95        97.59       108.29            99.97
+ 
+  2015          111.52        99.23        99.63        95.40
+                 98.28        98.93       101.61        98.41
+                 95.28        95.66        97.23       108.19            99.95
+ 
+  2016          111.39        99.96       100.51        95.33
+                 97.57        98.87       101.62        98.63
+                 95.13        95.52        96.75       108.17            99.95
+ 
+  2017          111.34       100.67       101.13        95.21
+                 97.06        98.72       101.73        98.75
+                 95.01        95.34        96.49       107.98            99.95
+ 
+  2018          111.54       101.25       101.59        95.15
+                 96.65        98.32       101.70        98.89
+                 95.01        95.35        96.34       107.98            99.98
+ 
+  2019          111.71       101.58       101.70        95.12
+                 96.40        98.00       101.75             
+                                                                        100.89
+ 
+  AVGE          111.56       100.00       100.29        95.33
+                 97.66        98.64       101.62        98.55
+                 95.25        95.67        97.05       108.14
+
+  Table Total-          7903.69   Mean-         100.05   Std. Dev.-           4.90
+                                  Min -          95.01        Max -         111.72
+
+ D 10.A  Final seasonal component forecasts
+  From  2019.Aug to 2020.Jul
+  Observations         12
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2019                                                       
+                                                        98.90
+                 95.02        95.40        96.43       107.95            98.74
+ 
+  2020          111.74       101.77       101.74        95.16
+                 96.16        97.86       101.75             
+                                                                        100.88
+ 
+        Comercial            PAGE  14, SERIES Comercial
+
+ D 11  Final seasonally adjusted data
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec           TOTAL  
+ ------------------------------------------------------------------------------
+  2013        2971084.     2861033.     2903526.     2956659.
+              2981799.     2907901.     2913895.     2974022.
+              3034763.     3047791.     3055756.     3311472.        35919700.
+ 
+  2014        3036721.     2844711.     2899582.     2956693.
+              2979704.     2968939.     3003747.     2921094.
+              2997680.     3238599.     3123613.     3034211.        36005294.
+ 
+  2015        3014943.     3100225.     3275800.     3106008.
+              3031305.     3124359.     3117157.     3157798.
+              3121229.     3147840.     3059145.     3125394.        37381205.
+ 
+  2016        3092151.     3504118.     3131771.     3160546.
+              3318714.     3262389.     3244659.     3186240.
+              3179403.     3085883.     3155383.     3172940.        38494197.
+ 
+  2017        3232007.     3392550.     3270827.     3046767.
+              3124209.     3111163.     3116205.     3164550.
+              3168901.     3189766.     3182714.     3289207.        38288866.
+ 
+  2018        3233856.     3237214.     3290719.     3290880.
+              3204463.     3277825.     3246116.     3261461.
+              3049280.     3081187.     3078187.     2984349.        38235537.
+ 
+  2019        3041173.     3075141.     2993987.     3040898.
+              3084785.     2997016.     3232357.             
+                                                                     21465358.
+ 
+  AVGE        3088848.     3144999.     3109459.     3079779.
+              3103569.     3092799.     3124877.     3110861.
+              3091876.     3131844.     3109133.     3152929.
+
+  Table Total-     245790155.38   Mean-     3111267.79   Std. Dev.-      128870.34
+                                  Min -     2844710.53        Max -     3504117.85
+
+                    Test for the presence of residual seasonality.
+
+       No evidence of residual seasonality in the entire series at the
+            1 per cent level.  F =      0.44
+
+       No evidence of residual seasonality in the last 3 years at the
+            1 per cent level.  F =      1.02
+
+       No evidence of residual seasonality in the last 3 years at the
+            5 per cent level.
+
+ Note: sudden large changes in the level of the adjusted series will
+       invalidate the results of this test for the last three year period.
+        Comercial            PAGE  15, SERIES Comercial
+  
+ D 12  Final trend cycle
+       (LS outliers included)
+  From  2013.Jan to 2019.Jul
+  Observations         79
+  Trend filter    13-term Henderson moving average
+  I/C ratio        2.72
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec           TOTAL  
+ ------------------------------------------------------------------------------
+  2013        2923068.     2922078.     2924018.     2927296.
+              2932038.     2941967.     2959426.     2983162.
+              3009773.     3033769.     3044645.     3037386.        35638625.
+ 
+  2014        3015483.     2990980.     2972253.     2962084.
+              2959200.     2965296.     2980135.     2998616.
+              3016274.     3032428.     3048964.     3062316.        36004029.
+ 
+  2015        3071046.     3075875.     3080481.     3088424.
+              3100708.     3112706.     3121061.     3126049.
+              3126112.     3119563.     3107934.     3099536.        37229496.
+ 
+  2016        3104008.     3124522.     3157886.     3195415.
+              3224943.     3236206.     3226846.     3202212.
+              3174624.     3158792.     3162973.     3182456.        38150882.
+ 
+  2017        3202853.     3211645.     3203094.     3180807.
+              3155052.     3135946.     3130937.     3142379.
+              3164520.     3190212.     3214622.     3235270.        38167337.
+ 
+  2018        3250875.     3260410.     3263311.     3260316.
+              3256040.     3257319.     3264613.     3272996.
+              3045107.     3050838.     3049355.     3042537.        38273717.
+ 
+  2019        3035673.     3032290.     3037404.     3051326.
+              3070691.     3090660.     3108076.             
+                                                                     21426121.
+ 
+  AVGE        3086144.     3088257.     3091207.     3095095.
+              3099810.     3105729.     3113013.     3120902.
+              3089402.     3097600.     3104749.     3109917.
+
+  Table Total-     244890208.12   Mean-     3099876.05   Std. Dev.-       99726.39
+                                  Min -     2922078.47        Max -     3272995.78
+        Comercial            PAGE  16, SERIES Comercial
+
+ D 13  Final irregular component
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            S.D.  
+ ------------------------------------------------------------------------------
+  2013           101.6         97.9         99.3        101.0
+                 101.7         98.8         98.5         99.7
+                 100.8        100.5        100.4        109.0              2.9
+ 
+  2014           100.7         95.1         97.6         99.8
+                 100.7        100.1        100.8         97.4
+                  99.4        106.8        102.4         99.1              2.8
+ 
+  2015            98.2        100.8        106.3        100.6
+                  97.8        100.4         99.9        101.0
+                  99.8        100.9         98.4        100.8              2.1
+ 
+  2016            99.6        112.1         99.2         98.9
+                 102.9        100.8        100.6         99.5
+                 100.2         97.7         99.8         99.7              3.7
+ 
+  2017           100.9        105.6        102.1         95.8
+                  99.0         99.2         99.5        100.7
+                 100.1        100.0         99.0        101.7              2.3
+ 
+  2018            99.5         99.3        100.8        100.9
+                  98.4        100.6         99.4         99.6
+                 100.1        101.0        100.9         98.1              1.0
+ 
+  2019           100.2        101.4         98.6         99.7
+                 100.5         97.0        104.0             
+                                                                           2.1
+ 
+  S.D.             1.1          5.5          2.8          1.7
+                   1.7          1.3          1.7          1.2
+                   0.4          3.0          1.3          3.9
+
+  Table Total-          7928.79   Mean-         100.36   Std. Dev.-           2.54
+                                  Min -          95.11        Max -         112.15
+        Comercial            PAGE  17, SERIES Comercial
+
+ D 16  Combined adjustment factors
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2013          111.72        98.57        98.55        95.61
+                 98.89        98.83       101.47        98.28
+                 95.59        96.20        97.87       108.24            99.99
+ 
+  2014          111.69        98.75        98.92        95.51
+                 98.76        98.83       101.50        98.33
+                 95.48        95.95        97.59       108.29            99.97
+ 
+  2015          111.52        99.23        99.63        95.40
+                 98.28        98.93       101.61        98.41
+                 95.28        95.66        97.23       108.19            99.95
+ 
+  2016          111.39        99.96       100.51        95.33
+                 97.57        98.87       101.62        98.63
+                 95.13        95.52        96.75       108.17            99.95
+ 
+  2017          111.34       100.67       101.13        95.21
+                 97.06        98.72       101.73        98.75
+                 95.01        95.34        96.49       107.98            99.95
+ 
+  2018          111.54       101.25       101.59        95.15
+                 96.65        98.32       101.70        98.89
+                 95.01        95.35        96.34       107.98            99.98
+ 
+  2019          111.71       101.58       101.70        95.12
+                 96.40        98.00       101.75             
+                                                                        100.89
+ 
+  AVGE          111.56       100.00       100.29        95.33
+                 97.66        98.64       101.62        98.55
+                 95.25        95.67        97.05       108.14
+
+  Table Total-          7903.69   Mean-         100.05   Std. Dev.-           4.90
+                                  Min -          95.01        Max -         111.72
+
+ D 16.A  Combined adjustment component forecasts
+  From  2019.Aug to 2020.Jul
+  Observations         12
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2019                                                       
+                                                        98.90
+                 95.02        95.40        96.43       107.95            98.74
+ 
+  2020          111.74       101.77       101.74        95.16
+                 96.16        97.86       101.75             
+                                                                        100.88
+ 
+        Comercial            PAGE  18, SERIES Comercial
+
+ E 4  Ratios of annual totals
+  From          2013 to 2018
+  Observations          6
+ -----------------------------------
+  Year      Unmodified     Modified
+                 (D11)         (E3)
+ -----------------------------------
+  2013          100.05        99.99
+ 
+  2014           99.97        99.99
+ 
+  2015           99.92        99.92
+ 
+  2016           99.93        99.93
+ 
+  2017          100.02       100.00
+ 
+  2018           99.98        99.98
+ 
+        Comercial            PAGE  19, SERIES Comercial
+
+ E 5  Month-to-month percent change in the original series
+  From  2013.Feb to 2019.Jul
+  Observations         78
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2013                        -15.0          1.5         -1.2
+                   4.3         -2.5          2.9         -1.1
+                  -0.8          1.1          2.0         19.8              1.0
+ 
+  2014            -5.4        -17.2          2.1         -1.5
+                   4.2         -0.3          3.9         -5.8
+                  -0.4          8.6         -1.9          7.8             -0.5
+ 
+  2015             2.3         -8.5          6.1         -9.2
+                   0.5          3.7          2.5         -1.9
+                  -4.3          1.2         -1.2         13.7              0.4
+ 
+  2016             1.9          1.7        -10.1         -4.3
+                   7.5         -0.4          2.2         -4.7
+                  -3.8         -2.5          3.6         12.4              0.3
+ 
+  2017             4.9         -5.1         -3.2        -12.3
+                   4.5          1.3          3.2         -1.4
+                  -3.7          1.0          1.0         15.7              0.5
+ 
+  2018             1.6         -9.1          2.0         -6.3
+                  -1.1          4.1          2.4         -2.3
+                 -10.2          1.4          0.9          8.7             -0.7
+ 
+  2019             5.4         -8.1         -2.5         -5.0
+                   2.8         -1.2         12.0             
+                                                                           0.5
+ 
+  AVGE             1.8         -8.8         -0.6         -5.7
+                   3.3          0.7          4.2         -2.9
+                  -3.8          1.8          0.7         13.0
+
+  Table Total-            14.82   Mean-           0.19   Std. Dev.-           6.36
+                                  Min -         -17.17        Max -          19.85
+        Comercial            PAGE  20, SERIES Comercial
+
+ E 6  Month-to-month percent change in seasonally adjusted series (D11)
+  From  2013.Feb to 2019.Jul
+  Observations         78
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2013                         -3.7          1.5          1.8
+                   0.9         -2.5          0.2          2.1
+                   2.0          0.4          0.3          8.4              1.0
+ 
+  2014            -8.3         -6.3          1.9          2.0
+                   0.8         -0.4          1.2         -2.8
+                   2.6          8.0         -3.6         -2.9             -0.6
+ 
+  2015            -0.6          2.8          5.7         -5.2
+                  -2.4          3.1         -0.2          1.3
+                  -1.2          0.9         -2.8          2.2              0.3
+ 
+  2016            -1.1         13.3        -10.6          0.9
+                   5.0         -1.7         -0.5         -1.8
+                  -0.2         -2.9          2.3          0.6              0.3
+ 
+  2017             1.9          5.0         -3.6         -6.9
+                   2.5         -0.4          0.2          1.6
+                   0.1          0.7         -0.2          3.3              0.3
+ 
+  2018            -1.7          0.1          1.7          0.0
+                  -2.6          2.3         -1.0          0.5
+                  -6.5          1.0         -0.1         -3.0             -0.8
+ 
+  2019             1.9          1.1         -2.6          1.6
+                   1.4         -2.8          7.9             
+                                                                           1.2
+ 
+  AVGE            -1.3          1.8         -0.9         -0.8
+                   0.8         -0.3          1.1          0.1
+                  -0.5          1.3         -0.7          1.4
+
+  Table Total-            13.53   Mean-           0.17   Std. Dev.-           3.63
+                                  Min -         -10.63        Max -          13.32
+        Comercial            PAGE  21, SERIES Comercial
+
+ E 7  Month-to-month percent change in final trend cycle (D12)
+  From  2013.Feb to 2019.Jul
+  Observations         78
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2013                          0.0          0.1          0.1
+                   0.2          0.3          0.6          0.8
+                   0.9          0.8          0.4         -0.2              0.4
+ 
+  2014            -0.7         -0.8         -0.6         -0.3
+                  -0.1          0.2          0.5          0.6
+                   0.6          0.5          0.5          0.4              0.1
+ 
+  2015             0.3          0.2          0.1          0.3
+                   0.4          0.4          0.3          0.2
+                   0.0         -0.2         -0.4         -0.3              0.1
+ 
+  2016             0.1          0.7          1.1          1.2
+                   0.9          0.3         -0.3         -0.8
+                  -0.9         -0.5          0.1          0.6              0.2
+ 
+  2017             0.6          0.3         -0.3         -0.7
+                  -0.8         -0.6         -0.2          0.4
+                   0.7          0.8          0.8          0.6              0.1
+ 
+  2018             0.5          0.3          0.1         -0.1
+                  -0.1          0.0          0.2          0.3
+                  -7.0          0.2          0.0         -0.2             -0.5
+ 
+  2019            -0.2         -0.1          0.2          0.5
+                   0.6          0.7          0.6             
+                                                                           0.3
+ 
+  AVGE             0.1          0.1          0.1          0.1
+                   0.2          0.2          0.2          0.2
+                  -0.9          0.3          0.2          0.2
+
+  Table Total-             6.49   Mean-           0.08   Std. Dev.-           0.93
+                                  Min -          -6.96        Max -           1.19
+        Comercial            PAGE  22, SERIES Comercial
+
+ E 8  Month-to-month percent change in original series adjusted for calendar factors (A18)
+  From  2013.Feb to 2019.Jul
+  Observations         78
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2013                        -15.0          1.5         -1.2
+                   4.3         -2.5          2.9         -1.1
+                  -0.8          1.1          2.0         19.8              1.0
+ 
+  2014            -5.4        -17.2          2.1         -1.5
+                   4.2         -0.3          3.9         -5.8
+                  -0.4          8.6         -1.9          7.8             -0.5
+ 
+  2015             2.3         -8.5          6.1         -9.2
+                   0.5          3.7          2.5         -1.9
+                  -4.3          1.2         -1.2         13.7              0.4
+ 
+  2016             1.9          1.7        -10.1         -4.3
+                   7.5         -0.4          2.2         -4.7
+                  -3.8         -2.5          3.6         12.4              0.3
+ 
+  2017             4.9         -5.1         -3.2        -12.3
+                   4.5          1.3          3.2         -1.4
+                  -3.7          1.0          1.0         15.7              0.5
+ 
+  2018             1.6         -9.1          2.0         -6.3
+                  -1.1          4.1          2.4         -2.3
+                 -10.2          1.4          0.9          8.7             -0.7
+ 
+  2019             5.4         -8.1         -2.5         -5.0
+                   2.8         -1.2         12.0             
+                                                                           0.5
+ 
+  AVGE             1.8         -8.8         -0.6         -5.7
+                   3.3          0.7          4.2         -2.9
+                  -3.8          1.8          0.7         13.0
+
+  Table Total-            14.82   Mean-           0.19   Std. Dev.-           6.36
+                                  Min -         -17.17        Max -          19.85
+        Comercial            PAGE  23, SERIES Comercial
+
+ E 18  Final adjustment ratios
+  From  2013.Jan to 2019.Jul
+  Observations         79
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2013           111.7         98.6         98.5         95.6
+                  98.9         98.8        101.5         98.3
+                  95.6         96.2         97.9        108.2            100.0
+ 
+  2014           111.7         98.8         98.9         95.5
+                  98.8         98.8        101.5         98.3
+                  95.5         95.9         97.6        108.3            100.0
+ 
+  2015           111.5         99.2         99.6         95.4
+                  98.3         98.9        101.6         98.4
+                  95.3         95.7         97.2        108.2             99.9
+ 
+  2016           111.4        100.0        100.5         95.3
+                  97.6         98.9        101.6         98.6
+                  95.1         95.5         96.8        108.2            100.0
+ 
+  2017           111.3        100.7        101.1         95.2
+                  97.1         98.7        101.7         98.7
+                  95.0         95.3         96.5        108.0            100.0
+ 
+  2018           111.5        101.3        101.6         95.2
+                  96.7         98.3        101.7         98.9
+                  95.0         95.4         96.3        108.0            100.0
+ 
+  2019           111.7        101.6        101.7         95.1
+                  96.4         98.0        101.8             
+                                                                         100.9
+ 
+  AVGE           111.6        100.0        100.3         95.3
+                  97.7         98.6        101.6         98.5
+                  95.3         95.7         97.0        108.1
+
+  Table Total-          7903.69   Mean-         100.05   Std. Dev.-           4.90
+                                  Min -          95.01        Max -         111.72
+
+ E 18.A  Final adjustment ratio forecasts
+  From  2019.Aug to 2020.Jul
+  Observations         12
+ ------------------------------------------------------------------------------
+                  Jan          Feb          Mar          Apr 
+                  May          Jun          Jul          Aug 
+                  Sep          Oct          Nov          Dec            AVGE  
+ ------------------------------------------------------------------------------
+  2019                                                       
+                                                         98.9
+                  95.0         95.4         96.4        107.9             98.7
+ 
+  2020           111.7        101.8        101.7         95.2
+                  96.2         97.9        101.8             
+                                                                         100.9
+ 
+        Comercial            PAGE  24, SERIES Comercial
+
+
+ F 2. Summary Measures
+   F 2.A: Average percent change without regard to sign over the
+          indicated span
+      Span
+       in      A1     D11     D13     D12     D10      A2     D18      F1
+     months    O      CI       I       C       S       P     TD&H     mcd
+        1    4.58    2.20    2.11    0.42    3.73    0.39    0.00    0.55
+        2    6.44    2.69    2.36    0.80    5.91    0.49    0.00    1.05
+        3    7.52    2.82    2.34    1.15    6.46    0.59    0.00    1.46
+        4    7.48    2.98    2.13    1.39    6.28    0.70    0.00    1.80
+        5    6.58    3.06    2.05    1.57    5.08    0.80    0.00    2.09
+        6    6.12    3.13    2.07    1.67    4.42    0.91    0.00    2.29
+        7    6.42    3.21    2.15    1.72    4.89    1.03    0.00    2.38
+        8    7.61    3.12    2.15    1.79    6.12    1.14    0.00    2.43
+        9    7.81    3.15    2.11    1.87    6.41    1.26    0.00    2.45
+       10    7.28    3.10    1.98    1.96    6.05    1.39    0.00    2.45
+       11    5.45    3.36    2.24    2.07    3.88    1.51    0.00    2.46
+       12    3.43    3.42    2.41    2.21    0.23    1.54    0.00    2.57
+
+      Span
+       in     E1      E2      E3
+     months  Mod.O   Mod.CI  Mod.I
+        1    4.07    1.54    1.42
+        2    6.06    1.80    1.43
+        3    7.01    1.92    1.40
+        4    6.75    2.12    1.21
+        5    5.85    2.30    1.29
+        6    5.40    2.34    1.21
+        7    5.62    2.30    1.28
+        8    6.81    2.24    1.23
+        9    7.26    2.27    1.20
+       10    6.99    2.40    1.21
+       11    4.79    2.55    1.33
+       12    2.80    2.75    1.54
+
+   F 2.B: Relative contributions to the variance of the percent change
+          in the components of the original series
+      Span
+       in     E3     D12     D10      A2     D18            RATIO
+     months   I       C       S       P     TD&H    TOTAL   (X100)
+        1   12.31    1.08   85.66    0.95   00.00  100.00   98.09
+        2    5.39    1.69   92.28    0.64   00.00  100.00  103.30
+        3    4.34    2.90   91.98    0.77   00.00  100.00   92.29
+        4    3.36    4.47   91.05    1.12   00.00  100.00   95.10
+        5    5.44    8.09   84.35    2.11   00.00  100.00   89.53
+        6    5.92   11.38   79.30    3.40   00.00  100.00   84.43
+        7    5.56   10.02   80.86    3.57   00.00  100.00   93.78
+        8    3.50    7.37   86.12    3.01   00.00  100.00   93.64
+        9    3.00    7.36   86.29    3.35   00.00  100.00   90.41
+       10    3.35    8.79   83.47    4.39   00.00  100.00   89.82
+       11    7.50   18.35   64.37    9.77   00.00  100.00  102.34
+       12   24.47   50.50    0.54   24.49   00.00  100.00  122.61
+
+   F 2.C: Average percent change with regard to sign and standard
+          deviation over indicated span
+      Span        A1               D13              D12
+       in          O                I                C
+     months   Avg.    S.D.     Avg.    S.D.     Avg.    S.D.
+        1     0.28    6.24     0.07    2.87     0.18    0.47
+        2     0.58    8.35     0.08    3.44     0.35    0.90
+        3     0.83    9.44     0.08    3.19     0.52    1.27
+        4     0.96    9.36     0.06    3.00     0.69    1.53
+        5     1.02    8.24     0.01    2.84     0.85    1.69
+        6     1.20    7.71     0.05    2.96     1.01    1.76
+        7     1.54    8.08     0.08    3.09     1.17    1.76
+        8     1.92    9.47     0.06    3.23     1.32    1.73
+        9     2.10    9.58     0.06    3.02     1.46    1.69
+       10     2.16    8.74     0.06    2.82     1.60    1.68
+       11     2.11    7.01     0.06    2.99     1.74    1.70
+       12     1.82    3.95    -0.07    3.16     1.88    1.75
+
+      Span        D10              D11               F1
+       in          S                CI              mcd
+     months   Avg.    S.D.     Avg.    S.D.     Avg.    S.D.
+        1     0.01    5.12     0.25    2.98     0.06    0.67
+        2     0.13    7.36     0.44    3.73     0.12    1.23
+        3     0.19    8.37     0.62    3.78     0.17    1.70
+        4     0.15    8.04     0.77    3.85     0.21    2.12
+        5     0.09    6.66     0.89    3.84     0.26    2.48
+        6     0.08    5.88     1.08    3.94     0.29    2.75
+        7     0.24    6.52     1.26    3.99     0.31    2.90
+        8     0.48    7.89     1.39    4.02     0.36    2.99
+        9     0.52    8.24     1.53    3.82     0.43    3.04
+       10     0.44    7.29     1.67    3.67     0.53    3.06
+       11     0.27    5.26     1.81    3.80     0.65    3.04
+       12     0.00    0.31     1.82    3.91     0.81    3.02
+
+   F 2.D: Average duration of run        CI      I       C      mcd
+                                        1.86    1.63    5.57    4.80
+
+
+   F 2.E: I/C Ratio for months span
+
+      SPAN         1       2       3       4       5       6
+      I/C        5.02    2.95    2.04    1.53    1.30    1.24
+
+      SPAN         7       8       9      10      11      12
+      I/C        1.25    1.20    1.13    1.01    1.08    1.09
+
+         months for cyclical dominance:      12
+
+
+   F 2.F: Relative contribution of the components to the stationary
+          portion of the variance in the original series
+
+                   I       C       S       P     TD&H   Total
+                  3.94    3.58   66.44   25.65    0.00   99.62
+
+
+   F 2.G: The autocorrelation of the irregulars for spans 1 to 14
+
+      SPAN         1       2       3       4       5       6       7
+      ACF        0.07   -0.37   -0.16    0.00    0.11    0.04   -0.04
+
+      SPAN         8       9      10      11      12      13      14
+      ACF       -0.13    0.03    0.19    0.07   -0.16   -0.09    0.10
+
+   F 2.H: The final I/C Ratio from Table D12:        2.72
+          The final I/S Ratio from Table D10:        4.95
+
+   F 2.I:                                                    Statistic   Prob.
+                                                                         level
+    F-test for stable seasonality from Table B 1.        :     18.911    0.00%
+    F-test for stable seasonality from Table D 8.        :     27.517    0.00%
+    Kruskal-Wallis Chi Squared test
+                  for stable seasonality from Table D 8. :     55.475    0.00%
+    F-test for moving seasonality from Table D 8.        :      0.966   44.67%
+
+        Comercial            PAGE  26, SERIES Comercial
+
+
+ F 3. Monitoring and Quality Assessment Statistics
+       All the measures below are in the range from 0 to 3 with an 
+       acceptance region from 0 to 1.
+
+    1. The relative contribution of the irregular over three       M1  =  0.438
+       months span (from Table F 2.B).
+
+
+    2. The relative contribution of the irregular component        M2  =  0.530
+       to the stationary portion of the variance (from Table 
+       F 2.F).
+
+    3. The amount of month to month change in the irregular        M3  =  0.862
+       component as compared to the amount of month to month
+       change in the trend-cycle (from Table F2.H).
+
+    4. The amount of autocorrelation in the irregular as           M4  =  0.454
+       described by the average duration of run (Table F 2.D).
+
+
+    5. The number of months it takes the change in the trend-      M5  =  3.000
+       cycle to surpass the amount of change in the irregular
+       (from Table F 2.E).
+
+    6. The amount of year to year change in the irregular as       M6  =  0.382
+       compared to the amount of year to year change in the
+       seasonal (from Table F 2.H).
+
+    7. The amount of moving seasonality present relative to        M7  =  0.424
+       the amount of stable seasonality (from Table F 2.I).
+
+
+    8. The size of the fluctuations in the seasonal component      M8  =  0.463
+       throughout the whole series.
+
+
+    9. The average linear movement in the seasonal component       M9  =  0.420
+       throughout the whole series.
+
+
+   10. Same as 8, calculated for recent years only.                M10 =  0.556
+
+
+
+   11. Same as 9, calculated for recent years only.                M11 =  0.539
+
+
+          *** ACCEPTED *** at the level   0.77
+
+          *** Check the  1 above measures which failed.
+
+          *** Q (without M2) =  0.81  CONDITIONALLY ACCEPTED.
+
+
+
+  QS statistic for seasonality:
+  Original Series                                    44.26  (P-Value =     0.0000)
+  Original Series (EV adj)                           66.73  (P-Value =     0.0000)
+  Residuals                                           0.00  (P-Value =     1.0000)
+  Seasonally Adjusted Series                          0.00  (P-Value =     1.0000)
+  Seasonally Adjusted Series (EV adj)                 0.00  (P-Value =     1.0000)
+  Irregular Series                                    0.00  (P-Value =     1.0000)
+  Irregular Series (EV adj)                           0.00  (P-Value =     1.0000)
+        Comercial            PAGE  27, SERIES Comercial
+ G 0  10*LOG(SPECTRUM) of the differenced, transformed Prior Adjusted Series
+      (Table B1).  Spectrum estimated from 2013.Jan to 2019.Jul.
+ ++++++++++I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I
+     -13.26I                                                             I    -13.26
+           I                    S                             S          I
+           I                    S                             S          I
+           I                    S                             S          I
+     -15.07I                    S                             S          I    -15.07
+           I                    S                             S          I
+           I                    S                             S          I
+           I                    S                             S          I
+     -16.89I                    S                             S          I    -16.89
+           I                    S                             S          I
+           I                    S                             S          I
+           I                    S                             S          I
+     -18.70I                    S                   S         S         SI    -18.70
+           I                   *S                   S         S         SI
+           I                   *S                   S         S         SI
+           I                   *S                   S*        S         SI
+     -20.51I                   *S                   S*        S         SI    -20.51
+           I                   *S                   S*        S         SI
+           I          S        *S                   S*        S         SI
+           I          S        *S                   S*        S         SI
+     -22.33I          S        *S                   S*        S*        SI    -22.33
+           I          S        *S                  *S*        S*        SI
+           I          S        *S         S        *S*        S*        SI
+           I          S        *S*        S*       *S*        S*        SI
+     -24.14I          S        *S*        S*       *S*        S*        SI    -24.14
+           I          S        *S*        S*      **S*        S*        SI
+           I         *S*      **S*        S*      **S*       *S*        SI
+           I         *S*      **S*        S*      **S*       *S*        SI
+     -25.95I         *S*      **S*   *    S*      **S*       *S*        SI    -25.95
+           I         *S*      **S*   **   S**     **S*       *S*   *    SI
+           I         *S*      **S*   **   S**    ***S*       *S*   *   *SI
+           I         *S*     ***S*   **  *S****  ***S*       *S*   *   *SI
+     -27.76I         *S*     ***S**  **  *S****  ***S*      **S*   *   *SI    -27.76
+           I         *S*     ***S** ***  *S*********S*T     **S*  **   *SI
+           I        **S*    ****S** **** *S*********S*T     **S*T **   *SI
+           I        **S*    ****S*********S*********S*T    ***S*T ***  *SI
+     -29.58I        **S**   ****S*********S*********S*T    ***S*T ***  *SI    -29.58
+           I        **S**  *****S*********S*********S*T    ***S*T****  *SI
+           I        **S**  *****S*********S*********S*T    ***S*T**** **SI
+           I        **S*********S*********S*********S*T    ***S*T**** **SI
+     -31.39I        **S*********S*********S*********S*T   ****S*T*******SI    -31.39
+           I        **S*********S*********S*********S*T   ****S*T*******SI
+           I       ***S*********S*********S*********S*T   ****S*T*******SI
+           I       ***S*********S*********S*********S*T*  ****S*T*******SI
+     -33.20I       ***S*********S*********S*********S*T*  ****S*T*******SI    -33.20
+           I       ***S*********S*********S*********S*T* *****S*T*******SI
+           I       ***S*********S*********S*********S*T*******S*T*******SI
+           I       ***S*********S*********S*********S*T*******S*T*******SI
+     -35.02I      ****S*********S*********S*********S*T*******S*T*******SI    -35.02
+           I  *   ****S*********S*********S*********S*T*******S*T*******SI
+           I  **  ****S*********S*********S*********S*T*******S*T*******SI
+           I *** *****S*********S*********S*********S*T*******S*T*******SI
+     -36.83I**********S*********S*********S*********S*T*******S*T*******SI    -36.83
+ ++++++++++I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I
+            S=SEASONAL FREQUENCIES, T=TRADING DAY FREQUENCIES
+        Comercial            PAGE  28, SERIES Comercial
+ G 1  10*LOG(SPECTRUM) of the differenced, transformed seasonally adjusted 
+      data (Table E2).  Spectrum estimated from 2013.Jan to 2019.Jul.
+ ++++++++++I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I
+     -26.76I                                                        *    I    -26.76
+           I                                                        *    I
+           I                                                        *    I
+           I                                                        *    I
+     -28.75I                                                        *    I    -28.75
+           I                                 *                      *    I
+           I                                 *                      *    I
+           I            *             *      *                    ***    I
+     -30.75I            *             *      *   *          *     ****   I    -30.75
+           I            *             **     *   **         *     ****   I
+           I            *             **     *   **         *     ****   I
+           I            *             **     *   **     *   *     ****   I
+     -32.74I            *             **     *   **     *   *     ****   I    -32.74
+           I            *            ***     *   **     *  **     ****   I
+           I            *            ***     *   **     *  **     ****   I
+           I            *            ***     **  **     *  **     ****   I
+     -34.74I            **           ***     **  **     *  **     ****   I    -34.74
+           I            **           ***     ** ***     ** **     ****   I
+           I            ** *   *S    ****    ** ****   *** **     ****   I
+           I            ** **  *S    ****   *** ****   ******    *****   I
+     -36.73I            *****  *S    ****   ********   ******    *****   I    -36.73
+           I       *    *****  *S    ****   ********   *******   *****   I
+           I       *    *****  *S    ****   ********   *******   *****   I
+           I       *   ******  *S   *****   ********S T*******   ******  I
+     -38.73I       *   *********S   *****   ********S T*******   ******  I    -38.73
+           I       **  *********S   *****   ********S*T*******   ******  I
+           I       **  *********S   ******  ********S*T*******   ******  I
+           I       **  *********S*  ******  ********S*T*******  T******  I
+     -40.72I       **  *********S*  ****** *********S*T*******S T******  I    -40.72
+           I       **  *********S* *******S*********S*T*******S T******  I
+           I      *** S*********S* *******S*********S*T*******S*T******* I
+           I      ****S*********S*********S*********S*T*******S*T******* I
+     -42.72I      ****S*********S*********S*********S*T*******S*T*******SI    -42.72
+           I      ****S*********S*********S*********S*T*******S*T*******SI
+           I      ****S*********S*********S*********S*T*******S*T*******SI
+           I      ****S*********S*********S*********S*T*******S*T*******SI
+     -44.71I     *****S*********S*********S*********S*T*******S*T*******SI    -44.71
+           I     *****S*********S*********S*********S*T*******S*T*******SI
+           I    ******S*********S*********S*********S*T*******S*T*******SI
+           I    ******S*********S*********S*********S*T*******S*T*******SI
+     -46.70I    ******S*********S*********S*********S*T*******S*T*******SI    -46.70
+           I    ******S*********S*********S*********S*T*******S*T*******SI
+           I   *******S*********S*********S*********S*T*******S*T*******SI
+           I   *******S*********S*********S*********S*T*******S*T*******SI
+     -48.70I   *******S*********S*********S*********S*T*******S*T*******SI    -48.70
+           I   *******S*********S*********S*********S*T*******S*T*******SI
+           I   *******S*********S*********S*********S*T*******S*T*******SI
+           I  ********S*********S*********S*********S*T*******S*T*******SI
+     -50.69I  ********S*********S*********S*********S*T*******S*T*******SI    -50.69
+           I  ********S*********S*********S*********S*T*******S*T*******SI
+           I  ********S*********S*********S*********S*T*******S*T*******SI
+           I *********S*********S*********S*********S*T*******S*T*******SI
+     -52.69I**********S*********S*********S*********S*T*******S*T*******SI    -52.69
+ ++++++++++I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I
+            S=SEASONAL FREQUENCIES, T=TRADING DAY FREQUENCIES
+        Comercial            PAGE  29, SERIES Comercial
+ G 2  10*LOG(SPECTRUM) of the Modified Irregular (Table E3).  
+      Spectrum estimated from 2013.Jan to 2019.Jul.
+ ++++++++++I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I
+     -32.60I                          *                                  I    -32.60
+           I                          *                                  I
+           I                          **     *                           I
+           I                          **     *                           I
+     -33.98I                          **     *                      *    I    -33.98
+           I                         ***     *                      *    I
+           I                         ***     *    *                 *    I
+           I                         ***     *    *                 **   I
+     -35.36I                         ***     *    *                ***   I    -35.36
+           I                         ***     *   **               ****   I
+           I                         ***     *   **         *     ****   I
+           I                         ***     *   **         *     ****   I
+     -36.74I            *            ***     *   **         *     ****   I    -36.74
+           I            *      *     ***     *   **         *     ****   I
+           I            *      *     ***     **  **         *     ****   I
+           I            *  *   *S    ****    **  **     *   *     ****   I
+     -38.12I            *  **  *S    ****    **  **     *   *     ****   I    -38.12
+           I            *  **  *S    ****    **  **     *   *     ****   I
+           I            ** **  *S    ****    **  **     *  **     ****   I
+           I            ** **  *S    ****    **  **     *  **     ****   I
+     -39.50I            ** **  *S   *****   *** ***     *  **     ****   I    -39.50
+           I            *****  *S   *****   *** ***     *  **     ****   I
+           I            *****  *S   *****   ********   **  **     ****   I
+           I            ********S   *****   ********   *** **     ****   I
+     -40.88I            ********S   *****   ********   *** **     ****   I    -40.88
+           I            ********S   *****   ********   ******     ****   I
+           I            ********S   *****   ********   ******     ****   I
+           I            ********S   ******  ********   ******     ****   I
+     -42.26I           *********S*  ******  ********   ******     ****   I    -42.26
+           I           *********S*  ******  ********   *******    ****   I
+           I           *********S*  ******  ********S T*******   ******  I
+           I           *********S* ******* *********S T*******   ******  I
+     -43.63I           *********S* ******* *********S*T*******   ******  I    -43.63
+           I           *********S*********S*********S*T*******   ******  I
+           I           *********S*********S*********S*T*******   ******  I
+           I           *********S*********S*********S*T*******   ******  I
+     -45.01I   *       *********S*********S*********S*T*******   ******  I    -45.01
+           I   *       *********S*********S*********S*T*******   ******  I
+           I   *       *********S*********S*********S*T*******   ******  I
+           I   *      S*********S*********S*********S*T*******   ******  I
+     -46.39I  **      S*********S*********S*********S*T*******S T******  I    -46.39
+           I  **      S*********S*********S*********S*T*******S T******* I
+           I  **      S*********S*********S*********S*T*******S T******* I
+           I  ***  ** S*********S*********S*********S*T*******S*T******* I
+     -47.77I  ***  ***S*********S*********S*********S*T*******S*T******* I    -47.77
+           I  *** ****S*********S*********S*********S*T*******S*T*******SI
+           I  *** ****S*********S*********S*********S*T*******S*T*******SI
+           I  ********S*********S*********S*********S*T*******S*T*******SI
+     -49.15I  ********S*********S*********S*********S*T*******S*T*******SI    -49.15
+           I *********S*********S*********S*********S*T*******S*T*******SI
+           I *********S*********S*********S*********S*T*******S*T*******SI
+           I *********S*********S*********S*********S*T*******S*T*******SI
+     -50.53I**********S*********S*********S*********S*T*******S*T*******SI    -50.53
+ ++++++++++I+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++I
+            S=SEASONAL FREQUENCIES, T=TRADING DAY FREQUENCIES
